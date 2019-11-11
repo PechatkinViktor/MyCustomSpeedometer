@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.pechatkin.sbt.mycustomspeedometer.CustomSpeedometerView
+        android:id="@+id/speedometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:low_medium_border="100"
+        app:medium_high_border="150"
+        app:speed="0"
+        app:max_speed="200"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"/>
+
+</LinearLayout>
